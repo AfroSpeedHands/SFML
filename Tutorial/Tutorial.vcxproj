@@ -167,6 +167,9 @@
     </ClCompile>
     <ClCompile Include="Tutorial.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Media\Textures\Player.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

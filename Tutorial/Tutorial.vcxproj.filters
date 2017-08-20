@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Media">
+      <UniqueIdentifier>{0463dbd8-b737-44ef-bd4a-b19559516dbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Media\Textures">
+      <UniqueIdentifier>{aee7e7fc-0302-4431-a76f-731fe37f54a0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -38,5 +44,10 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Media\Textures\Player.png">
+      <Filter>Media\Textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>

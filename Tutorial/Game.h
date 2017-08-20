@@ -16,12 +16,17 @@ public:
 
 	private:
 		sf::RenderWindow mWindow;
-		sf::CircleShape mPlayer;
+		sf::Texture mTexture;
+		sf::Sprite mPlayer;
+
+		sf::Time TimePerFrame = sf::seconds(1.f / 60.f);
 		
 		bool mIsMovingUp;
 		bool mIsMovingDown;
 		bool mIsMovingLeft;
 		bool mIsMovingRight;
+
+		float speed = 100;
 	
 };
 

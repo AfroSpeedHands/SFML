@@ -6,17 +6,30 @@ Game::Game()
 	: mWindow(sf::VideoMode(640, 480), "SFML Application")
 	, mPlayer()
 {
-	mPlayer.setRadius(40.f);
+	if (!mTexture.loadFromFile("Media/Textures/Player.png"))
+	{
+		printf("Cannot Load Player.png");
+	}
+	mPlayer.setTexture(mTexture);
 	mPlayer.setPosition(100.f, 100.f);
-	mPlayer.setFillColor(sf::Color::Cyan);
 }
 
 void Game::run()
 {
+	sf::Clock clock;
+	sf::Time timeSinceLastUpdate = sf::Time::Zero;
 	while (mWindow.isOpen())
 	{
+
 		processEvents();
-		update();
+		timeSinceLastUpdate += clock.restart();
+		while (timeSinceLastUpdate > TimePerFrame)
+		{
+			timeSinceLastUpdate -= TimePerFrame;
+			processEvents();
+			update(TimePerFrame);
+		}
+		
 		render();
 	}
 }
@@ -54,7 +67,7 @@ void Game::update(sf::Time deltaTime)
 	if (mIsMovingRight)
 		movement.x += 1.f;
 
-	mPlayer.move(movement);
+	mPlayer.move(movement * deltaTime.asSeconds() * speed);
 }
 
 void Game::render()
