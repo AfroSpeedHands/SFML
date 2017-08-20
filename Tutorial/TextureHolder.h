@@ -22,11 +22,4 @@ namespace Textures {
 			std::unique_ptr<sf::Texture>> mTextureMap;
 	};
 
-	TextureHolder::TextureHolder()
-	{
-	}
-
-	TextureHolder::~TextureHolder()
-	{
-	}
 }
