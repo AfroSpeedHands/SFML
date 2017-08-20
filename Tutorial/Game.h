@@ -5,17 +5,17 @@ class Game
 public:
 
 	public:
-		Game();
-		void run();
+							Game();
+		void				run();
 
 	private:
-		void processEvents();
-		void update();
-		void render();
+		void				processEvents();
+		void				update();
+		void				render();
 
 	private:
-		sf::RenderWindow mWindow;
-		sf::CircleShape mPlayer;
+		sf::RenderWindow	mWindow;
+		sf::CircleShape		mPlayer;
 	
 };
 
